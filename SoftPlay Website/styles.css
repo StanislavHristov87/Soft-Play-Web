@@ -1,0 +1,642 @@
+/* Custom Fonts */
+.font-heading {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Consistent Button Styles */
+.btn-primary {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.875rem 2rem;
+    font-weight: 400;
+    border-radius: 0.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #000000;
+    min-width: 200px;
+    font-size: 0.875rem;
+}
+
+.btn-primary:hover {
+    background-color: #1a1a1a;
+    color: #e67e45;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(230, 126, 69, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #000000;
+    padding: 0.875rem 2rem;
+    font-weight: 400;
+    border-radius: 0.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid #000000;
+    min-width: 200px;
+    font-size: 0.875rem;
+}
+
+.btn-secondary:hover {
+    background-color: #000000;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+/* Link Hover Effects */
+a {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+a:hover {
+    color: #1a1a1a;
+}
+
+/* Navigation Link Underline Effect */
+nav a:not(.btn-primary):not(.btn-secondary)::after,
+footer a:not(.btn-primary):not(.btn-secondary)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #000000;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav a:not(.btn-primary):not(.btn-secondary):hover::after,
+footer a:not(.btn-primary):not(.btn-secondary):hover::after {
+    width: 100%;
+}
+
+/* Section Spacing */
+section {
+    padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 4rem 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    section {
+        padding: 5rem 0;
+    }
+}
+
+/* Card Hover Effects */
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.card-hover:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(230, 126, 69, 0.3);
+}
+
+/* Varied colorful shadows for cards - cycles through orange, green, purple */
+.card-hover:nth-child(3n+1) {
+    box-shadow: 0 4px 6px -1px rgba(230, 126, 69, 0.2), 0 2px 4px -2px rgba(230, 126, 69, 0.15);
+}
+
+.card-hover:nth-child(3n+1):hover {
+    box-shadow: 0 20px 40px rgba(230, 126, 69, 0.35) !important;
+}
+
+.card-hover:nth-child(3n+2) {
+    box-shadow: 0 4px 6px -1px rgba(34, 197, 94, 0.2), 0 2px 4px -2px rgba(34, 197, 94, 0.15);
+}
+
+.card-hover:nth-child(3n+2):hover {
+    box-shadow: 0 20px 40px rgba(34, 197, 94, 0.35) !important;
+}
+
+.card-hover:nth-child(3n+3) {
+    box-shadow: 0 4px 6px -1px rgba(168, 85, 247, 0.2), 0 2px 4px -2px rgba(168, 85, 247, 0.15);
+}
+
+.card-hover:nth-child(3n+3):hover {
+    box-shadow: 0 20px 40px rgba(168, 85, 247, 0.35) !important;
+}
+
+/* Image Hover Effects */
+img {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover img {
+    transform: scale(1.05);
+}
+
+/* Form Input Styles */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0 3px rgba(230, 126, 69, 0.2);
+    outline: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Scroll Animation Classes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animation Classes */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+}
+
+.scale-in {
+    animation: scaleIn 0.6s ease-out;
+}
+
+/* Stagger Animation for Grid Items */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.stagger-item.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth Image Load Animation */
+img {
+    transition: opacity 0.4s ease-in;
+}
+
+img:not(.loaded) {
+    opacity: 0.3;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* Statistics Box */
+.statistics-box {
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.statistics-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(230, 126, 69, 0.2);
+}
+
+/* Star Color for Testimonials */
+.testimonial-star {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(95%) saturate(1234%) hue-rotate(1deg) brightness(105%) contrast(105%);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-star:hover {
+    transform: scale(1.2);
+}
+
+/* Mobile Menu Animation */
+#mobile-menu {
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Button Base Styles */
+button,
+.btn-primary,
+.btn-secondary {
+    font-family: 'Jost', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Full width buttons should not have min-width */
+.btn-primary.w-full,
+.btn-secondary.w-full {
+    min-width: auto;
+}
+
+/* Section Headings */
+section h2 {
+    margin-bottom: 1rem;
+}
+
+section p {
+    margin-bottom: 1.5rem;
+}
+
+/* Ensure all headings use Jost and are not bold */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+/* Container Max Width */
+.container {
+    max-width: 1280px;
+}
+
+/* Improved Spacing Utilities */
+.space-section {
+    padding: 3rem 0;
+}
+
+@media (min-width: 768px) {
+    .space-section {
+        padding: 4rem 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .space-section {
+        padding: 5rem 0;
+    }
+}
+
+/* Focus Visible for Accessibility */
+*:focus-visible {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+}
+
+/* Gallery Modal Styles */
+#image-modal {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#modal-image {
+    animation: zoomIn 0.3s ease-in-out;
+    width: 100%;
+    height: auto;
+    max-height: 85vh;
+    display: block;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#prev-image:hover,
+#next-image:hover {
+    transform: scale(1.2) translateY(-50%);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+#close-modal:hover {
+    transform: scale(1.1);
+    background-color: #f3f4f6;
+}
+
+#prev-image,
+#next-image {
+    transition: all 0.3s ease;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+#close-modal {
+    transition: all 0.3s ease;
+}
+
+/* Language Switcher Styles */
+.lang-switcher {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-switcher:hover {
+    transform: scale(1.1);
+}
+
+.lang-switcher.active {
+    background-color: #f3f4f6;
+    border: 2px solid #000000;
+}
+
+.lang-switcher.active::after {
+    content: '✓';
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    background: #000000;
+    color: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+.lang-switcher img {
+    transition: transform 0.3s ease;
+}
+
+.lang-switcher:hover img {
+    transform: scale(1.1);
+}
+
+/* Form Message Styles */
+#form-message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    text-align: center;
+    animation: fadeInUp 0.3s ease-out;
+}
+
+#form-message.text-green-600 {
+    background-color: #f0fdf4;
+    border: 1px solid #86efac;
+}
+
+#form-message.text-red-600 {
+    background-color: #fef2f2;
+    border: 1px solid #fca5a5;
+}
+
+/* Disabled Button State */
+button:disabled,
+.btn-primary:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Form Input Error State */
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown),
+select:invalid:not(:placeholder-shown) {
+    border-color: #ef4444;
+}
+
+input:valid:not(:placeholder-shown),
+textarea:valid:not(:placeholder-shown),
+select:valid:not(:placeholder-shown) {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(230, 126, 69, 0.15);
+}
+
+/* Article Modal Styling */
+#article-modal {
+    animation: fadeIn 0.3s ease-out;
+}
+
+.article-modal-content {
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#close-article-modal {
+    transition: all 0.3s ease;
+    line-height: 1;
+}
+
+#close-article-modal:hover {
+    transform: scale(1.1);
+    background-color: #f3f4f6;
+}
+
+#close-article-modal span {
+    display: block;
+    line-height: 1;
+}
+
+#modal-article-image {
+    transition: opacity 0.3s ease-in;
+    display: block;
+}
+
+/* Colorful Shadows - Varied colors for different elements */
+.shadow-sm {
+    box-shadow: 0 1px 2px 0 rgba(230, 126, 69, 0.15);
+}
+
+.shadow {
+    box-shadow: 0 1px 3px 0 rgba(230, 126, 69, 0.2), 0 1px 2px -1px rgba(230, 126, 69, 0.1);
+}
+
+/* Varied colorful shadows - different colors for visual interest */
+.shadow-md {
+    box-shadow: 0 4px 6px -1px rgba(230, 126, 69, 0.2), 0 2px 4px -2px rgba(230, 126, 69, 0.15);
+}
+
+/* Apply different shadow colors based on element position - cycles through orange, green, purple */
+.shadow-md:nth-child(3n+1) {
+    box-shadow: 0 4px 6px -1px rgba(230, 126, 69, 0.2), 0 2px 4px -2px rgba(230, 126, 69, 0.15);
+}
+
+.shadow-md:nth-child(3n+2) {
+    box-shadow: 0 4px 6px -1px rgba(34, 197, 94, 0.2), 0 2px 4px -2px rgba(34, 197, 94, 0.15);
+}
+
+.shadow-md:nth-child(3n+3) {
+    box-shadow: 0 4px 6px -1px rgba(168, 85, 247, 0.2), 0 2px 4px -2px rgba(168, 85, 247, 0.15);
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.25), 0 4px 6px -4px rgba(59, 130, 246, 0.2);
+}
+
+.shadow-xl {
+    box-shadow: 0 20px 25px -5px rgba(236, 72, 153, 0.3), 0 8px 10px -6px rgba(236, 72, 153, 0.25);
+}
+
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(168, 85, 247, 0.35);
+}
+
+.hover\:shadow-xl:hover {
+    box-shadow: 0 20px 25px -5px rgba(34, 197, 94, 0.3), 0 8px 10px -6px rgba(34, 197, 94, 0.25);
+}
+
+/* Interactive card effects for all cards */
+.rounded-lg.shadow-md,
+.rounded-lg.shadow-lg {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.rounded-lg.shadow-md:hover,
+.rounded-lg.shadow-lg:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* Varied colorful hover shadows for cards in grids and flex containers */
+.grid .shadow-md:nth-child(3n+1):hover,
+.flex .shadow-md:nth-child(3n+1):hover,
+.flex-col .shadow-md:nth-child(3n+1):hover,
+.grid > .shadow-md:nth-child(3n+1):hover,
+.flex > .shadow-md:nth-child(3n+1):hover {
+    box-shadow: 0 20px 40px rgba(230, 126, 69, 0.35) !important;
+}
+
+.grid .shadow-md:nth-child(3n+2):hover,
+.flex .shadow-md:nth-child(3n+2):hover,
+.flex-col .shadow-md:nth-child(3n+2):hover,
+.grid > .shadow-md:nth-child(3n+2):hover,
+.flex > .shadow-md:nth-child(3n+2):hover {
+    box-shadow: 0 20px 40px rgba(34, 197, 94, 0.35) !important;
+}
+
+.grid .shadow-md:nth-child(3n+3):hover,
+.flex .shadow-md:nth-child(3n+3):hover,
+.flex-col .shadow-md:nth-child(3n+3):hover,
+.grid > .shadow-md:nth-child(3n+3):hover,
+.flex > .shadow-md:nth-child(3n+3):hover {
+    box-shadow: 0 20px 40px rgba(168, 85, 247, 0.35) !important;
+}

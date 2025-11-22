@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги - Soft Play Solutions</title>
+    <meta name="description" content="Професионални услуги за изграждане на нови детски площадки, ремонт и поддръжка, периодична инспекция и консултации. Следваме европейските стандарти за безопасност EN 1176 и EN 1177.">
+    <meta name="keywords" content="изграждане детски площадки, ремонт детски площадки, поддръжка детски площадки, инспекция детски площадки, консултации детски площадки, България">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.softplaysolutions.com/services.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.softplaysolutions.com/services.html">
+    <meta property="og:title" content="Услуги - Soft Play Solutions">
+    <meta property="og:description" content="Професионални услуги за изграждане, ремонт и поддръжка на детски площадки. Следваме европейските стандарти за безопасност.">
+    <meta property="og:image" content="https://www.softplaysolutions.com/pictures/services header.jpg">
+    <meta property="og:locale" content="bg_BG">
+    <meta property="og:locale:alternate" content="en_GB">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.softplaysolutions.com/services.html">
+    <meta property="twitter:title" content="Услуги - Soft Play Solutions">
+    <meta property="twitter:description" content="Професионални услуги за изграждане, ремонт и поддръжка на детски площадки.">
+    <meta property="twitter:image" content="https://www.softplaysolutions.com/pictures/services header.jpg">
+    
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="bg" href="https://www.softplaysolutions.com/services.html">
+    <link rel="alternate" hreflang="en" href="https://www.softplaysolutions.com/services.html?lang=en">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Translations -->
+    <script src="translations.js"></script>
+</head>
+<body class="font-sans">
+    <!-- Header/Navigation -->
+    <header class="bg-white fixed w-full top-0 z-50 shadow-sm transition-shadow duration-300">
+        <nav class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-heading text-black">
+                    SOFT PLAY SOLUTIONS
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-10">
+                    <a href="index.html#home" class="text-black hover:text-gray-600 transition relative" data-translate="nav.home">НАЧАЛО</a>
+                    <a href="services.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.services">УСЛУГИ</a>
+                    <a href="gallery.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.gallery">ГАЛЕРИЯ</a>
+                    <a href="tips.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.tips">СЪВЕТИ</a>
+                    <a href="products.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.products">ПРОДУКТИ</a>
+                    <a href="about.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.about">ЗА НАС</a>
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-2 border-l border-gray-300 pl-4">
+                        <button onclick="setLanguage('bg')" class="lang-switcher flex items-center justify-center w-8 h-8 rounded hover:bg-gray-100 transition" data-lang="bg" title="Български">
+                            <img src="icons/Bulgaria.png" alt="Bulgarian" class="w-6 h-6 object-contain">
+                        </button>
+                        <button onclick="setLanguage('en')" class="lang-switcher flex items-center justify-center w-8 h-8 rounded hover:bg-gray-100 transition" data-lang="en" title="English">
+                            <img src="icons/United Kingdom.png" alt="English" class="w-6 h-6 object-contain">
+                        </button>
+                    </div>
+                    <a href="contact.html" class="btn-primary" data-translate="nav.contact">
+                        СВЪРЖЕТЕ СЕ С НАС
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-black">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html#home" class="text-black hover:text-gray-600 transition" data-translate="nav.home">НАЧАЛО</a>
+                    <a href="services.html" class="text-black hover:text-gray-600 transition" data-translate="nav.services">УСЛУГИ</a>
+                    <a href="gallery.html" class="text-black hover:text-gray-600 transition" data-translate="nav.gallery">ГАЛЕРИЯ</a>
+                    <a href="tips.html" class="text-black hover:text-gray-600 transition" data-translate="nav.tips">СЪВЕТИ</a>
+                    <a href="products.html" class="text-black hover:text-gray-600 transition" data-translate="nav.products">ПРОДУКТИ</a>
+                    <a href="about.html" class="text-black hover:text-gray-600 transition" data-translate="nav.about">ЗА НАС</a>
+                    <!-- Language Switcher Mobile -->
+                    <div class="flex items-center space-x-2 pt-2 border-t border-gray-300">
+                        <span class="text-sm text-gray-600">Language:</span>
+                        <button onclick="setLanguage('bg')" class="lang-switcher flex items-center justify-center w-8 h-8 rounded hover:bg-gray-100 transition" data-lang="bg">
+                            <img src="icons/Bulgaria.png" alt="Bulgarian" class="w-6 h-6 object-contain">
+                        </button>
+                        <button onclick="setLanguage('en')" class="lang-switcher flex items-center justify-center w-8 h-8 rounded hover:bg-gray-100 transition" data-lang="en">
+                            <img src="icons/United Kingdom.png" alt="English" class="w-6 h-6 object-contain">
+                        </button>
+                    </div>
+                    <a href="contact.html" class="btn-primary w-full text-center" data-translate="nav.contact">
+                        СВЪРЖЕТЕ СЕ С НАС
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[calc(60vh+60px)] flex items-center justify-center pt-20 pb-20">
+        <div class="absolute inset-0 z-0">
+            <img src="pictures\services header.jpg" alt="Услуги за детски площадки - Soft Play Solutions" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+        
+        <div class="relative z-10 container mx-auto px-4 lg:px-8 text-center text-white">
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl mb-6" data-translate="services.heroTitle">
+                Нашите услуги
+            </h1>
+            <p class="text-lg md:text-xl mb-8 max-w-5xl mx-auto" data-translate="services.heroSubtitle">
+                Предлагаме пълноценни решения за детски площадки – от проектиране и изграждане до поддръжка и ремонт. Всички наши услуги се съобразяват с европейските стандарти за сигурност и качество.
+            </p>
+            
+            <!-- Statistics Box -->
+            <div class="bg-white bg-opacity-90 rounded-lg p-6 md:p-8 max-w-5xl mx-auto mt-16 statistics-box">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-heading text-black mb-2">100+</div>
+                        <div class="text-sm md:text-base text-gray-700" data-translate="home.statsProjects">ЗАВЪРШЕНИ ПРОЕКТА</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-heading text-black mb-2">10+</div>
+                        <div class="text-sm md:text-base text-gray-700" data-translate="home.statsYears">ГОДИНИ ОПИТ</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-heading text-black mb-2">21+</div>
+                        <div class="text-sm md:text-base text-gray-700" data-translate="home.statsCountries">ДЪРЖАВИ, В КОИТО СМЕ РЕАЛИЗИРАЛИ ОБЕКТИ</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-heading text-black mb-2">70+</div>
+                        <div class="text-sm md:text-base text-gray-700" data-translate="home.statsClients">ДОВОЛНИ КЛИЕНТИ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 1: Изграждане на нови площадки -->
+    <section class="space-section bg-white border-b border-gray-200">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Column: Text Content -->
+                <div>
+                    <span class="text-5xl md:text-6xl font-heading text-orange-600 block mb-4">01</span>
+                    <h2 class="font-heading text-3xl md:text-4xl mb-6" data-translate="services.service1Title">Изграждане на нови площадки</h2>
+                    <p class="text-lg md:text-xl text-gray-700 mb-6" data-translate="services.service1Desc">
+                        От идеята до реализацията – предлагаме готови и индивидуални проекти според вашето пространство и бюджет.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-black mr-3">•</span>
+                            <span class="text-gray-700" data-translate="services.service1Bullet1">Индивидуален дизайн и 3D визуализация</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-black mr-3">•</span>
+                            <span class="text-gray-700" data-translate="services.service1Bullet2">Сертифицирани материали и оборудване</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-black mr-3">•</span>
+                            <span class="text-gray-700" data-translate="services.service1Bullet3">Експертна консултация и планиране</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-black mr-3">•</span>
+                            <span class="text-gray-700" data-translate="services.service1Bullet4">Пълна реализация от начало до край</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary inline-block" data-translate="services.service1Button">
+                        ПОИСКАЙТЕ ОФЕРТА
+                    </a>
+                </div>
+                
+                <!-- Right Column: Image -->
+                <div class="flex justify-center lg:justify-end">
+                    <img src="pictures\Image (Изграждане на площадки).png" alt="Изграждане на нови площадки" class="w-full max-w-lg rounded-lg shadow-lg object-cover">
+                </div>
+            </div>
+            
+            <!-- Process Steps -->
+            <div class="mt-16 pt-12 border-t border-gray-200">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <span class="text-3xl font-heading text-orange-600 block mb-2">01</span>
+                        <h3 class="font-heading text-lg mb-1" data-translate="services.processStep1Title">Консултация</h3>
+                        <p class="text-sm text-gray-600" data-translate="services.processStep1Desc">Първоначална среща и анализ</p>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-3xl font-heading text-orange-600 block mb-2">02</span>
+                        <h3 class="font-heading text-lg mb-1" data-translate="services.processStep2Title">Проект</h3>
+                        <p class="text-sm text-gray-600" data-translate="services.processStep2Desc">Дизайн и визуализация</p>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-3xl font-heading text-orange-600 block mb-2">03</span>
+                        <h3 class="font-heading text-lg mb-1" data-translate="services.processStep3Title">Изпълнение</h3>
+                        <p class="text-sm text-gray-600" data-translate="services.processStep3Desc">Монтаж и инсталация</p>
+                    </div>
+                    <div class="text-center">
+                        <span class="text-3xl font-heading text-orange-600 block mb-2">04</span>
+                        <h3 class="font-heading text-lg mb-1" data-translate="services.processStep4Title">Предаване</h3>
+                        <p class="text-sm text-gray-600" data-translate="services.processStep4Desc">Финална проверка и сертификация</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 2: Ремонт и поддръжка -->
+    <section class="space-section bg-white border-b border-gray-200">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Column: Image -->
+                <div class="flex justify-center lg:justify-start order-2 lg:order-1">
+                    <img src="pictures\Image-2.jpg" alt="Ремонт и поддръжка" class="w-full max-w-lg rounded-lg shadow-lg object-cover">
+                </div>
+                
+                <!-- Right Column: Text Content -->
+                <div class="order-1 lg:order-2">
+                    <span class="text-5xl md:text-6xl font-heading text-orange-600 block mb-4">02</span>
+                    <h2 class="font-heading text-3xl md:text-4xl mb-6" data-translate="services.service2Title">Ремонт и поддръжка</h2>
+                    <p class="text-lg md:text-xl text-gray-700 mb-6" data-translate="services.service2Desc">
+                        Професионална поддръжка и бърза реакция за поддържане на вашата детска площадка в отлично състояние.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-black mr-3">•</span>
+                            <span class="text-gray-700" data-translate="services.service2Bullet1">Ремонт на настилки и конструкции</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-black mr-3">•</span>
+                            <span class="text-gray-700" data-translate="services.service2Bullet2">Подмяна на износени елементи</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-black mr-3">•</span>
+                            <span class="text-gray-700" data-translate="services.service2Bullet3">Боядисване и обновяване</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-black mr-3">•</span>
+                            <span class="text-gray-700" data-translate="services.service2Bullet4">Спешни ремонти и аварийна поддръжка</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary inline-block" data-translate="services.service2Button">
+                        ЗАЯВЕТЕ РЕМОНТ
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Additional Info -->
+            <div class="mt-16 pt-12 border-t border-gray-200 bg-gray-50 rounded-lg p-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <h3 class="font-heading text-lg mb-2" data-translate="services.service2Info1Title">Спешни случаи</h3>
+                        <p class="text-gray-700" data-translate="services.service2Info1Value">До 24 часа</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading text-lg mb-2" data-translate="services.service2Info2Title">Планови ремонти</h3>
+                        <p class="text-gray-700" data-translate="services.service2Info2Value">3-5 дни</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading text-lg mb-2" data-translate="services.service2Info3Title">Профилактика</h3>
+                        <p class="text-gray-700" data-translate="services.service2Info3Value">По график</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 3: Периодична инспекция -->
+    <section class="space-section bg-white border-b border-gray-200">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Column: Text Content -->
+                <div>
+                    <span class="text-5xl md:text-6xl font-heading text-orange-600 block mb-4">03</span>
+                    <h2 class="font-heading text-3xl md:text-4xl mb-6" data-translate="services.service3Title">Периодична инспекция</h2>
+                    <p class="text-lg md:text-xl text-gray-700 mb-6" data-translate="services.service3Desc">
+                        Редовни проверки на сигурността и функционалността на детските площадки за гарантиране на безопасността на децата.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-black mr-3">•</span>
+                            <span class="text-gray-700" data-translate="services.service3Bullet1">Проверка на структурни елементи</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-black mr-3">•</span>
+                            <span class="text-gray-700" data-translate="services.service3Bullet2">Тестване на здравина и издръжливост</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-black mr-3">•</span>
+                            <span class="text-gray-700" data-translate="services.service3Bullet3">Оценка на настилки и безопасност</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-black mr-3">•</span>
+                            <span class="text-gray-700" data-translate="services.service3Bullet4">Издаване на протоколи и препоръки</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary inline-block" data-translate="services.service3Button">
+                        ЗАПАЗЕТЕ ИНСПЕКЦИЯ
+                    </a>
+                </div>
+                
+                <!-- Right Column: Image -->
+                <div class="flex justify-center lg:justify-end">
+                    <img src="pictures/Image-3.jpg" alt="Периодична инспекция" class="w-full max-w-lg rounded-lg shadow-lg object-cover">
+                </div>
+            </div>
+            
+            <!-- Additional Info -->
+            <div class="mt-16 pt-12 border-t border-gray-200 bg-gray-50 rounded-lg p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div>
+                        <h3 class="font-heading text-lg mb-2" data-translate="services.service3Info1Title">Визуална проверка</h3>
+                        <p class="text-gray-700" data-translate="services.service3Info1Value">Седмично</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading text-lg mb-2" data-translate="services.service3Info2Title">Оперативна инспекция</h3>
+                        <p class="text-gray-700" data-translate="services.service3Info2Value">Месечно</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading text-lg mb-2" data-translate="services.service3Info3Title">Годишна инспекция</h3>
+                        <p class="text-gray-700" data-translate="services.service3Info3Value">Годишно</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading text-lg mb-2" data-translate="services.service3Info4Title">Главна инспекция</h3>
+                        <p class="text-gray-700" data-translate="services.service3Info4Value">На 3 години</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 4: Консултации и дизайн -->
+    <section class="space-section bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Column: Image -->
+                <div class="flex justify-center lg:justify-start order-2 lg:order-1">
+                    <img src="pictures\Image (Инспекция).png" alt="Консултации и дизайн" class="w-full max-w-lg rounded-lg shadow-lg object-cover">
+                </div>
+                
+                <!-- Right Column: Text Content -->
+                <div class="order-1 lg:order-2">
+                    <span class="text-5xl md:text-6xl font-heading text-orange-600 block mb-4">04</span>
+                    <h2 class="font-heading text-3xl md:text-4xl mb-6" data-translate="services.service4Title">Консултации и дизайн</h2>
+                    <p class="text-lg md:text-xl text-gray-700 mb-6" data-translate="services.service4Desc">
+                        Експертни съвети за избор на безопасни, функционални и красиви решения за вашето пространство.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-black mr-3">•</span>
+                            <span class="text-gray-700" data-translate="services.service4Bullet1">Избор на оборудване и материали</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-black mr-3">•</span>
+                            <span class="text-gray-700" data-translate="services.service4Bullet2">Оптимизация на пространството</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-black mr-3">•</span>
+                            <span class="text-gray-700" data-translate="services.service4Bullet3">Планиране на бюджета</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-black mr-3">•</span>
+                            <span class="text-gray-700" data-translate="services.service4Bullet4">Съответствие със стандарти</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="btn-primary inline-block" data-translate="services.service4Button">
+                        ЗАПАЗЕТЕ КОНСУЛТАЦИЯ
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Additional Info -->
+            <div class="mt-16 pt-12 border-t border-gray-200 bg-gray-50 rounded-lg p-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="font-heading text-xl mb-3" data-translate="services.service4Info1Title">Безплатна консултация</h3>
+                        <p class="text-gray-700" data-translate="services.service4Info1Desc">Първоначална среща и оценка на вашите нужди без такса.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading text-xl mb-3" data-translate="services.service4Info2Title">Проектна консултация</h3>
+                        <p class="text-gray-700" data-translate="services.service4Info2Desc">Детайлно планиране и дизайн на вашия проект.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-heading text-xl mb-3" data-translate="services.service4Info3Title">Техническа консултация</h3>
+                        <p class="text-gray-700" data-translate="services.service4Info3Desc">Експертни съвети за технически аспекти и стандарти.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA Section -->
+    <section class="space-section bg-white">
+        <div class="container mx-auto px-4 lg:px-8 text-center">
+            <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl mb-6" data-translate="services.ctaTitle">
+                Готови за следващия проект?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto" data-translate="services.ctaDesc">
+                Свържете се с нас за безплатна консултация и персонализирана оферта. Нашият екип е готов да ви помогне да реализирате вашата идея.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="btn-primary" data-translate="services.ctaButton1">
+                    СВЪРЖИ СЕ С НАС
+                </a>
+                <a href="gallery.html" class="btn-secondary" data-translate="services.ctaButton2">
+                    РАЗГЛЕДАЙ ПРОЕКТИ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-black py-12">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-2xl font-heading text-black">
+                    SOFT PLAY SOLUTIONS
+                </div>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="index.html#home" class="text-black hover:text-gray-600 transition relative" data-translate="nav.home">НАЧАЛО</a>
+                    <a href="services.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.services">УСЛУГИ</a>
+                    <a href="gallery.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.gallery">ГАЛЕРИЯ</a>
+                    <a href="tips.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.tips">СЪВЕТИ</a>
+                    <a href="products.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.products">ПРОДУКТИ</a>
+                    <a href="about.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.about">ЗА НАС</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-300 text-center">
+                <p class="mb-2"><a href="https://www.behance.net/uxuimate" target="_blank" class="text-purple-600 hover:text-purple-700 transition">Designed by UX UI MATE</a></p>
+                <p class="text-gray-500">Copyrighted © 2025 Soft Play Solutions</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Playground Construction and Maintenance",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Soft Play Solutions",
+            "telephone": "+359889878731",
+            "email": "softplay1987@gmail.com"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": ["Bulgaria", "Europe"]
+        },
+        "description": "Professional services for construction, repair and maintenance of children's playgrounds"
+    }
+    </script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+

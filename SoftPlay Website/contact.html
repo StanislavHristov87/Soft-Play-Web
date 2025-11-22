@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти - Soft Play Solutions</title>
+    <meta name="description" content="Свържете се с нашия екип за безплатна консултация, оферта или въпроси. Отговаряме до 24 часа. Телефон: +359 889 878 731, Имейл: softplay1987@gmail.com">
+    <meta name="keywords" content="контакти, телефон, имейл, адрес, оферта, консултация, детски площадки България">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.softplaysolutions.com/contact.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.softplaysolutions.com/contact.html">
+    <meta property="og:title" content="Контакти - Soft Play Solutions">
+    <meta property="og:description" content="Свържете се с нашия екип за безплатна консултация, оферта или въпроси. Отговаряме до 24 часа.">
+    <meta property="og:image" content="https://www.softplaysolutions.com/pictures/contact us header.jpg">
+    <meta property="og:locale" content="bg_BG">
+    <meta property="og:locale:alternate" content="en_GB">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.softplaysolutions.com/contact.html">
+    <meta property="twitter:title" content="Контакти - Soft Play Solutions">
+    <meta property="twitter:description" content="Свържете се с нашия екип за безплатна консултация, оферта или въпроси. Отговаряме до 24 часа.">
+    <meta property="twitter:image" content="https://www.softplaysolutions.com/pictures/contact us header.jpg">
+    
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="bg" href="https://www.softplaysolutions.com/contact.html">
+    <link rel="alternate" hreflang="en" href="https://www.softplaysolutions.com/contact.html?lang=en">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Translations -->
+    <script src="translations.js"></script>
+</head>
+<body class="font-sans">
+    <!-- Header/Navigation -->
+    <header class="bg-white fixed w-full top-0 z-50 shadow-sm transition-shadow duration-300">
+        <nav class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-heading text-black">
+                    SOFT PLAY SOLUTIONS
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-10">
+                    <a href="index.html#home" class="text-black hover:text-gray-600 transition relative" data-translate="nav.home">НАЧАЛО</a>
+                    <a href="services.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.services">УСЛУГИ</a>
+                    <a href="gallery.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.gallery">ГАЛЕРИЯ</a>
+                    <a href="tips.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.tips">СЪВЕТИ</a>
+                    <a href="products.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.products">ПРОДУКТИ</a>
+                    <a href="about.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.about">ЗА НАС</a>
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-2 border-l border-gray-300 pl-4">
+                        <button onclick="setLanguage('bg')" class="lang-switcher flex items-center justify-center w-8 h-8 rounded hover:bg-gray-100 transition" data-lang="bg" title="Български">
+                            <img src="icons/Bulgaria.png" alt="Bulgarian" class="w-6 h-6 object-contain">
+                        </button>
+                        <button onclick="setLanguage('en')" class="lang-switcher flex items-center justify-center w-8 h-8 rounded hover:bg-gray-100 transition" data-lang="en" title="English">
+                            <img src="icons/United Kingdom.png" alt="English" class="w-6 h-6 object-contain">
+                        </button>
+                    </div>
+                    <a href="contact.html" class="btn-primary" data-translate="nav.contact">
+                        СВЪРЖЕТЕ СЕ С НАС
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-black">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html#home" class="text-black hover:text-gray-600 transition" data-translate="nav.home">НАЧАЛО</a>
+                    <a href="services.html" class="text-black hover:text-gray-600 transition" data-translate="nav.services">УСЛУГИ</a>
+                    <a href="gallery.html" class="text-black hover:text-gray-600 transition" data-translate="nav.gallery">ГАЛЕРИЯ</a>
+                    <a href="tips.html" class="text-black hover:text-gray-600 transition" data-translate="nav.tips">СЪВЕТИ</a>
+                    <a href="products.html" class="text-black hover:text-gray-600 transition" data-translate="nav.products">ПРОДУКТИ</a>
+                    <a href="about.html" class="text-black hover:text-gray-600 transition" data-translate="nav.about">ЗА НАС</a>
+                    <!-- Language Switcher Mobile -->
+                    <div class="flex items-center space-x-2 pt-2 border-t border-gray-300">
+                        <span class="text-sm text-gray-600">Language:</span>
+                        <button onclick="setLanguage('bg')" class="lang-switcher flex items-center justify-center w-8 h-8 rounded hover:bg-gray-100 transition" data-lang="bg">
+                            <img src="icons/Bulgaria.png" alt="Bulgarian" class="w-6 h-6 object-contain">
+                        </button>
+                        <button onclick="setLanguage('en')" class="lang-switcher flex items-center justify-center w-8 h-8 rounded hover:bg-gray-100 transition" data-lang="en">
+                            <img src="icons/United Kingdom.png" alt="English" class="w-6 h-6 object-contain">
+                        </button>
+                    </div>
+                    <a href="contact.html" class="btn-primary w-full text-center" data-translate="nav.contact">
+                        СВЪРЖЕТЕ СЕ С НАС
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Contact Info Cards -->
+    <section class="relative min-h-[calc(60vh+60px)] flex items-center justify-center pt-20 pb-20">
+        <div class="absolute inset-0 z-0">
+            <img src="pictures\contact us header.jpg" alt="Контакти - Свържете се с нашия екип" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+        
+        <div class="relative z-10 container mx-auto px-4 lg:px-8 text-center text-white">
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl mb-6" data-translate="contact.heroTitle">
+                Свържете се с нашия екип
+            </h1>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto" data-translate="contact.heroSubtitle">
+                Имате нужда от ремонт, проект или консултация? Попълнете формата или ни потърсете директно – ще ви отговорим до 24 часа.
+            </p>
+            
+            <!-- Contact Info Cards - 4 Columns -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mt-16">
+                <!-- Email Card -->
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <div class="mb-4 flex justify-center">
+                        <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-lg mb-2 text-black" data-translate="home.email">ИМЕЙЛ:</h3>
+                    <a href="mailto:softplay1987@gmail.com" class="text-gray-700 hover:text-black transition inline-block">softplay1987@gmail.com</a>
+                </div>
+                
+                <!-- Phone Card -->
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <div class="mb-4 flex justify-center">
+                        <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-lg mb-2 text-black" data-translate="home.phone">ТЕЛЕФОН:</h3>
+                    <a href="tel:+359889878731" class="text-gray-700 hover:text-black transition inline-block">+359 889 878 731</a>
+                </div>
+                
+                <!-- Address Card -->
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <div class="mb-4 flex justify-center">
+                        <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-lg mb-2 text-black" data-translate="home.address">АДРЕС:</h3>
+                    <p class="text-gray-700" data-translate="home.locationAddress">гр. Разград, жк. Орел, бл. 24, ет. 2, ап. 4</p>
+                </div>
+                
+                <!-- Working Hours Card -->
+                <div class="bg-white rounded-lg p-6 shadow-lg">
+                    <div class="mb-4 flex justify-center">
+                        <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-lg mb-2 text-black" data-translate="home.workingHours">РАБОТНО ВРЕМЕ:</h3>
+                    <p class="text-gray-700" data-translate="home.workingHoursValue">Пон-Пет: 9:00-18:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="space-section bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl text-center mb-4" data-translate="contact.formTitle">
+                Свържете се с нашия екип
+            </h2>
+            <p class="text-center text-lg md:text-xl mb-8 text-gray-600" data-translate="contact.formSubtitle">
+                Имате нужда от ремонт, проект или консултация? Попълнете формата или ни потърсете директно – ще ви отговорим до 24 часа.
+            </p>
+            
+            <!-- Contact Form -->
+            <div class="max-w-4xl mx-auto">
+                <form id="contact-form" class="bg-white rounded-lg p-8 md:p-10 shadow-lg">
+                    <!-- First Row: Name and Email -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2" data-translate="contact.formName">Име и фамилия</label>
+                            <input type="text" id="name" name="name" required data-translate-placeholder="contact.formName" placeholder="Име и фамилия" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black transition-all">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2" data-translate="contact.formEmail">Имейл адрес</label>
+                            <input type="email" id="email" name="email" required data-translate-placeholder="contact.formEmail" placeholder="Имейл адрес" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black transition-all">
+                        </div>
+                    </div>
+                    
+                    <!-- Second Row: Phone and Service -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-2" data-translate="contact.formPhone">Телефон за връзка</label>
+                            <input type="tel" id="phone" name="phone" required data-translate-placeholder="contact.formPhone" placeholder="Телефон за връзка" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black transition-all">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-gray-700 mb-2" data-translate="contact.formService">Изберете услуга</label>
+                            <select id="service" name="service" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black transition-all">
+                                <option value="" data-translate="contact.formService">Изберете услуга</option>
+                                <option value="construction" data-translate="contact.formServiceOption1">Изграждане на нови площадки</option>
+                                <option value="repair" data-translate="contact.formServiceOption2">Ремонт и поддръжка</option>
+                                <option value="inspection" data-translate="contact.formServiceOption3">Периодична инспекция</option>
+                                <option value="consultation" data-translate="contact.formServiceOption4">Консултации и дизайн</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Third Row: Message -->
+                    <div class="mb-8">
+                        <label for="message" class="block text-gray-700 mb-2" data-translate="contact.formMessage">Вашето съобщение или въпрос...</label>
+                        <textarea id="message" name="message" rows="5" required data-translate-placeholder="contact.formMessage" placeholder="Вашето съобщение или въпрос..." class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black transition-all resize-none"></textarea>
+                    </div>
+                    
+                    <div id="form-message" class="mb-4 hidden"></div>
+                    <button type="submit" class="btn-primary w-full" data-translate="contact.formSubmit">
+                        ИЗПРАТИ СЪОБЩЕНИЕ
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="space-section bg-gray-50">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-heading text-black mb-2">100+</div>
+                    <div class="text-sm md:text-base text-gray-700" data-translate="home.statsProjects">ЗАВЪРШЕНИ ПРОЕКТА</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-heading text-black mb-2">10+</div>
+                    <div class="text-sm md:text-base text-gray-700" data-translate="home.statsYears">ГОДИНИ ОПИТ</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-heading text-black mb-2">21+</div>
+                    <div class="text-sm md:text-base text-gray-700" data-translate="home.statsCountries">ДЪРЖАВИ, В КОИТО СМЕ РЕАЛИЗИРАЛИ ОБЕКТИ</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-heading text-black mb-2">70+</div>
+                    <div class="text-sm md:text-base text-gray-700" data-translate="home.statsClients">ДОВОЛНИ КЛИЕНТИ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Доказан опит и доволни клиенти -->
+    <section class="space-section bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Column: Text Content -->
+                <div>
+                    <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl mb-8" data-translate="products.section2Title">
+                        Доказан опит и доволни клиенти
+                    </h2>
+                    <div class="space-y-6">
+                        <p class="text-lg md:text-xl text-gray-700" data-translate="products.section2Text1">
+                            С над 10 години опит, Soft Play Solutions е водещият доставчик на иновативни и безопасни детски пространства, детски зони и трамплинни паркове в България и Европа. Нашият експертен екип създава персонализирани проекти за търговски центрове, хотели, спортни комплекси и частни инвеститори, гарантирайки качество, безопасност и развитие на децата.
+                        </p>
+                        <p class="text-lg md:text-xl text-gray-700" data-translate="products.section2Text2">
+                            Реализирали сме успешни проекти в над 21 държави, използвайки сертифицирани европейски материали. Предлагаме пълни решения: от дизайн и 3D визуализация до монтаж и поддръжка.
+                        </p>
+                        <p class="text-lg md:text-xl text-gray-700" data-translate="products.section2Text3">
+                            Свържете се с нас днес и нека реализираме заедно вашата идея за детска зона или трамплинен парк.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Image -->
+                <div class="flex justify-center lg:justify-end">
+                    <img src="pictures/Image.png" alt="Доказан опит" class="w-full max-w-lg rounded-lg shadow-lg object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Вдъхновение и безопасност в едно -->
+    <section class="space-section bg-gray-50">
+        <div class="container mx-auto px-4 lg:px-8">
+            <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl text-center mb-8" data-translate="about.section1Title">
+                Вдъхновение и безопасност в едно
+            </h2>
+            <div class="max-w-4xl mx-auto space-y-6">
+                <p class="text-lg md:text-xl text-gray-700 text-center" data-translate="contact.inspirationText">
+                    С над 10 години опит в създаването на модерни и функционални детски съоръжения за търговски центрове, хотели, училища и обществени пространства, ние комбинираме устойчиви материали, модерен дизайн и грижа за всяко дете. Ние не просто строим детски площадки – ние строим доверие.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-black py-12">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-2xl font-heading text-black">
+                    SOFT PLAY SOLUTIONS
+                </div>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="index.html#home" class="text-black hover:text-gray-600 transition relative" data-translate="nav.home">НАЧАЛО</a>
+                    <a href="services.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.services">УСЛУГИ</a>
+                    <a href="gallery.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.gallery">ГАЛЕРИЯ</a>
+                    <a href="tips.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.tips">СЪВЕТИ</a>
+                    <a href="products.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.products">ПРОДУКТИ</a>
+                    <a href="about.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.about">ЗА НАС</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-300 text-center">
+                <p class="mb-2"><a href="https://www.behance.net/uxuimate" target="_blank" class="text-purple-600 hover:text-purple-700 transition">Designed by UX UI MATE</a></p>
+                <p class="text-gray-500">Copyrighted © 2025 Soft Play Solutions</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "Soft Play Solutions",
+            "telephone": "+359889878731",
+            "email": "softplay1987@gmail.com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "жк. Орел, бл. 24, ет. 2, ап. 4",
+                "addressLocality": "Разград",
+                "addressCountry": "BG"
+            },
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "18:00"
+            }
+        }
+    }
+    </script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+

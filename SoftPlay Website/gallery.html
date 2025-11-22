@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерия - Soft Play Solutions</title>
+    <meta name="description" content="Разгледайте нашите реализирани проекти в над 21 държави по света. Модерни и функционални детски съоръжения за търговски центрове, хотели, училища и обществени пространства.">
+    <meta name="keywords" content="детски площадки проекти, галерия детски площадки, реализирани проекти, детски зони, трамплинни паркове, България, Европа">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.softplaysolutions.com/gallery.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.softplaysolutions.com/gallery.html">
+    <meta property="og:title" content="Галерия Проекти - Soft Play Solutions">
+    <meta property="og:description" content="Разгледайте нашите реализирани проекти в над 21 държави по света.">
+    <meta property="og:image" content="https://www.softplaysolutions.com/pictures/Hero Gallery.png">
+    <meta property="og:locale" content="bg_BG">
+    <meta property="og:locale:alternate" content="en_GB">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.softplaysolutions.com/gallery.html">
+    <meta property="twitter:title" content="Галерия Проекти - Soft Play Solutions">
+    <meta property="twitter:description" content="Разгледайте нашите реализирани проекти в над 21 държави по света.">
+    <meta property="twitter:image" content="https://www.softplaysolutions.com/pictures/Hero Gallery.png">
+    
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="bg" href="https://www.softplaysolutions.com/gallery.html">
+    <link rel="alternate" hreflang="en" href="https://www.softplaysolutions.com/gallery.html?lang=en">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Translations -->
+    <script src="translations.js"></script>
+</head>
+<body class="font-sans">
+    <!-- Header/Navigation -->
+    <header class="bg-white fixed w-full top-0 z-50 shadow-sm transition-shadow duration-300">
+        <nav class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="text-2xl font-heading text-black">
+                    SOFT PLAY SOLUTIONS
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-10">
+                    <a href="index.html#home" class="text-black hover:text-gray-600 transition relative" data-translate="nav.home">НАЧАЛО</a>
+                    <a href="services.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.services">УСЛУГИ</a>
+                    <a href="gallery.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.gallery">ГАЛЕРИЯ</a>
+                    <a href="tips.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.tips">СЪВЕТИ</a>
+                    <a href="products.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.products">ПРОДУКТИ</a>
+                    <a href="about.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.about">ЗА НАС</a>
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-2 border-l border-gray-300 pl-4">
+                        <button onclick="setLanguage('bg')" class="lang-switcher flex items-center justify-center w-8 h-8 rounded hover:bg-gray-100 transition" data-lang="bg" title="Български">
+                            <img src="icons/Bulgaria.png" alt="Bulgarian" class="w-6 h-6 object-contain">
+                        </button>
+                        <button onclick="setLanguage('en')" class="lang-switcher flex items-center justify-center w-8 h-8 rounded hover:bg-gray-100 transition" data-lang="en" title="English">
+                            <img src="icons/United Kingdom.png" alt="English" class="w-6 h-6 object-contain">
+                        </button>
+                    </div>
+                    <a href="contact.html" class="btn-primary" data-translate="nav.contact">
+                        СВЪРЖЕТЕ СЕ С НАС
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-black">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html#home" class="text-black hover:text-gray-600 transition" data-translate="nav.home">НАЧАЛО</a>
+                    <a href="services.html" class="text-black hover:text-gray-600 transition" data-translate="nav.services">УСЛУГИ</a>
+                    <a href="gallery.html" class="text-black hover:text-gray-600 transition" data-translate="nav.gallery">ГАЛЕРИЯ</a>
+                    <a href="tips.html" class="text-black hover:text-gray-600 transition" data-translate="nav.tips">СЪВЕТИ</a>
+                    <a href="products.html" class="text-black hover:text-gray-600 transition" data-translate="nav.products">ПРОДУКТИ</a>
+                    <a href="about.html" class="text-black hover:text-gray-600 transition" data-translate="nav.about">ЗА НАС</a>
+                    <!-- Language Switcher Mobile -->
+                    <div class="flex items-center space-x-2 pt-2 border-t border-gray-300">
+                        <span class="text-sm text-gray-600">Language:</span>
+                        <button onclick="setLanguage('bg')" class="lang-switcher flex items-center justify-center w-8 h-8 rounded hover:bg-gray-100 transition" data-lang="bg">
+                            <img src="icons/Bulgaria.png" alt="Bulgarian" class="w-6 h-6 object-contain">
+                        </button>
+                        <button onclick="setLanguage('en')" class="lang-switcher flex items-center justify-center w-8 h-8 rounded hover:bg-gray-100 transition" data-lang="en">
+                            <img src="icons/United Kingdom.png" alt="English" class="w-6 h-6 object-contain">
+                        </button>
+                    </div>
+                    <a href="contact.html" class="btn-primary w-full text-center" data-translate="nav.contact">
+                        СВЪРЖЕТЕ СЕ С НАС
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] flex items-center justify-center pt-20 pb-20">
+        <div class="absolute inset-0 z-0">
+            <img src="pictures/Hero Gallery.png" alt="Галерия проекти - Детски площадки по света" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+        
+        <div class="relative z-10 container mx-auto px-4 lg:px-8 text-center text-white">
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl mb-6" data-translate="gallery.heroTitle">
+                Галерия проекти
+            </h1>
+            <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto" data-translate="gallery.heroSubtitle">
+                Разгледайте някои от нашите реализирани проекти в цял свят
+            </p>
+            
+            <!-- Statistics Box -->
+            <div class="bg-white bg-opacity-90 rounded-lg p-6 md:p-8 max-w-5xl mx-auto mt-16 statistics-box">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-heading text-black mb-2">100+</div>
+                        <div class="text-sm md:text-base text-gray-700" data-translate="home.statsProjects">ЗАВЪРШЕНИ ПРОЕКТА</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-heading text-black mb-2">10+</div>
+                        <div class="text-sm md:text-base text-gray-700" data-translate="home.statsYears">ГОДИНИ ОПИТ</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-heading text-black mb-2">21+</div>
+                        <div class="text-sm md:text-base text-gray-700" data-translate="home.statsCountries">ДЪРЖАВИ, В КОИТО СМЕ РЕАЛИЗИРАЛИ ОБЕКТИ</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-4xl font-heading text-black mb-2">70+</div>
+                        <div class="text-sm md:text-base text-gray-700" data-translate="home.statsClients">ДОВОЛНИ КЛИЕНТИ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introductory Text Section -->
+    <section class="space-section bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="max-w-8xl mx-auto space-y-6">
+                <p class="text-lg md:text-xl text-gray-700 text-center" data-translate="gallery.introText1">
+                    С повече от 10 години опит, ние създаваме модерни и функционални детски съоръжения за търговски центрове, хотели, училища и обществени пространства в цяла Европа, Азия и Африка. Нашият професионализъм и внимание към детайла ни позволяват да реализираме проекти, които вдъхновяват и забавляват децата, докато осигуряват спокойствие на родителите.
+                </p>
+                <p class="text-lg md:text-xl text-gray-700 text-center" data-translate="gallery.introText2">
+                    Всеки проект е уникален и получава индивидуален подход – от 3D дизайн и визуализация до изграждане, поддръжка и ремонт. Работим с сертифицирани материали и следваме строгите международни стандарти за сигурност, за да гарантираме, че всяко дете може да се забавлява без рискове.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="space-section bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <!-- Gallery Item 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover cursor-pointer gallery-item flex flex-col stagger-item" data-index="0">
+                    <img src="pictures/image-(moderen-apartament-sofiya)-1.png" alt="Детска площадка проект в Doha, Qatar" class="w-full h-64 object-cover">
+                    <div class="flex-1 flex items-center justify-center p-4 text-center min-h-[64px]">
+                        <p class="">Doha, Qatar</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover cursor-pointer gallery-item flex flex-col stagger-item" data-index="1">
+                    <img src="pictures/image-(moderen-apartament-sofiya)-2.png" alt="Детска площадка проект в Doha, Qatar" class="w-full h-64 object-cover">
+                    <div class="flex-1 flex items-center justify-center p-4 text-center min-h-[64px]">
+                        <p class="">Doha, Qatar</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover cursor-pointer gallery-item flex flex-col stagger-item" data-index="2">
+                    <img src="pictures/image-(moderen-apartament-sofiya)-3.png" alt="Детска площадка проект в Essen, Netherlands" class="w-full h-64 object-cover">
+                    <div class="flex-1 flex items-center justify-center p-4 text-center min-h-[64px]">
+                        <p class="">Essen, Netherlands</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover cursor-pointer gallery-item flex flex-col stagger-item" data-index="3">
+                    <img src="pictures/image-(moderen-apartament-sofiya)-4.png" alt="Детска площадка проект в Essen, Netherlands" class="w-full h-64 object-cover">
+                    <div class="flex-1 flex items-center justify-center p-4 text-center min-h-[64px]">
+                        <p class="">Essen, Netherlands</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover cursor-pointer gallery-item flex flex-col stagger-item" data-index="4">
+                    <img src="pictures/image-(moderen-apartament-sofiya)-5.png" alt="Детска площадка проект в Hasselt, Belgium" class="w-full h-64 object-cover">
+                    <div class="flex-1 flex items-center justify-center p-4 text-center min-h-[64px]">
+                        <p class="">Hasselt, Belgium</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover cursor-pointer gallery-item flex flex-col stagger-item" data-index="5">
+                    <img src="pictures/image-(moderen-apartament-sofiya)-6.png" alt="Детска площадка проект в Kiev, Ukraine" class="w-full h-64 object-cover">
+                    <div class="flex-1 flex items-center justify-center p-4 text-center min-h-[64px]">
+                        <p class="">Kiev, Ukraine</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 7 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover cursor-pointer gallery-item flex flex-col stagger-item" data-index="6">
+                    <img src="pictures/image-(moderen-apartament-sofiya)-7.png" alt="Детска площадка проект в Kiev, Ukraine" class="w-full h-64 object-cover">
+                    <div class="flex-1 flex items-center justify-center p-4 text-center min-h-[64px]">
+                        <p class="">Kiev, Ukraine</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 8 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover cursor-pointer gallery-item flex flex-col stagger-item" data-index="7">
+                    <img src="pictures/image-(moderen-apartament-sofiya)-8.png" alt="Детска площадка проект в Rhodes, Greece" class="w-full h-64 object-cover">
+                    <div class="flex-1 flex items-center justify-center p-4 text-center min-h-[64px]">
+                        <p class="">Rhodes, Greece</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 9 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover cursor-pointer gallery-item flex flex-col stagger-item" data-index="8">
+                    <img src="pictures/image-(moderen-apartament-sofiya).png" alt="Детска площадка проект в Anje, France" class="w-full h-64 object-cover">
+                    <div class="flex-1 flex items-center justify-center p-4 text-center min-h-[64px]">
+                        <p class="">Anje, France</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="space-section bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <!-- Heading and Description -->
+            <h2 class="font-heading text-3xl md:text-4xl lg:text-5xl text-center mb-4" data-translate="home.contactTitle">
+                Свържете се с нашия екип
+            </h2>
+            <p class="text-center text-lg md:text-xl mb-4 text-gray-600" data-translate="home.contactSubtitle1">
+                Имате нужда от ремонт, проект или консултация?
+            </p>
+            <p class="text-center text-lg md:text-xl mb-8 text-gray-600" data-translate="home.contactSubtitle2">
+                Попълнете формата или ни потърсете директно – ще ви отговорим до 24 часа.
+            </p>
+            
+            <!-- Contact Info - 4 Columns -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-8 max-w-6xl mx-auto">
+                <div class="text-center md:text-left">
+                    <h3 class="font-heading text-xl mb-3" data-translate="home.email">ИМЕЙЛ:</h3>
+                    <a href="mailto:softplay1987@gmail.com" class="text-gray-700 hover:text-black transition inline-block">softplay1987@gmail.com</a>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="font-heading text-xl mb-3" data-translate="home.phone">ТЕЛЕФОН:</h3>
+                    <a href="tel:+359889878731" class="text-gray-700 hover:text-black transition inline-block">+359 889 878 731</a>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="font-heading text-xl mb-3" data-translate="home.address">АДРЕС:</h3>
+                    <p class="text-gray-700" data-translate="home.locationAddress">гр. Разград, жк. Орел, бл. 24, ет. 2, ап. 4</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <h3 class="font-heading text-xl mb-3" data-translate="home.workingHours">РАБОТНО ВРЕМЕ:</h3>
+                    <p class="text-gray-700" data-translate="home.workingHoursValue">Пон-Пет: 9:00-18:00</p>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="max-w-4xl mx-auto">
+                <form id="contact-form" class="bg-white rounded-lg p-8 md:p-10 shadow-lg">
+                    <!-- First Row: Name and Email -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-gray-700  mb-2" data-translate="home.formName">Име</label>
+                            <input type="text" id="name" name="name" required data-translate-placeholder="home.formName" placeholder="Име" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black transition-all">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700  mb-2" data-translate="home.formEmail">Имейл</label>
+                            <input type="email" id="email" name="email" required data-translate-placeholder="home.formEmail" placeholder="Имейл" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black transition-all">
+                        </div>
+                    </div>
+                    
+                    <!-- Second Row: Phone -->
+                    <div class="mb-6">
+                        <label for="phone" class="block text-gray-700  mb-2" data-translate="home.formPhone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" required data-translate-placeholder="home.formPhone" placeholder="Телефон" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black transition-all">
+                    </div>
+                    
+                    <!-- Third Row: Message -->
+                    <div class="mb-8">
+                        <label for="message" class="block text-gray-700  mb-2" data-translate="home.formMessage">Съобщение</label>
+                        <textarea id="message" name="message" rows="5" required data-translate-placeholder="home.formMessage" placeholder="Съобщение" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-black transition-all resize-none"></textarea>
+                    </div>
+                    
+                    <div id="form-message" class="mb-4 hidden"></div>
+                    <button type="submit" class="btn-primary w-full" data-translate="home.formSubmit">
+                        ИЗПРАТИ СЪОБЩЕНИЕ
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal Overlay -->
+    <div id="image-modal" class="hidden fixed inset-0 z-[100] bg-black bg-opacity-90 flex items-center justify-center p-4 overflow-y-auto">
+        <div class="relative bg-white rounded-lg max-w-4xl w-full my-8 shadow-2xl overflow-hidden">
+            <!-- Close Button -->
+            <button id="close-modal" class="absolute top-4 right-4 z-10 text-gray-500 hover:text-black transition text-3xl bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md leading-none">
+                <span class="relative top-[-2px]">&times;</span>
+            </button>
+            
+            <!-- Navigation Arrows -->
+            <button id="prev-image" class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition text-6xl z-10 font-light">
+                &#8249;
+            </button>
+            
+            <button id="next-image" class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition text-6xl z-10 font-light">
+                &#8250;
+            </button>
+            
+            <!-- Modal Content -->
+            <div class="w-full flex flex-col">
+                <img id="modal-image" src="" alt="" class="w-full h-auto object-cover">
+                <p id="modal-caption" class="text-black text-center py-4 px-6 text-xl bg-white"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white text-black py-12">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-2xl font-heading text-black">
+                    SOFT PLAY SOLUTIONS
+                </div>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="index.html#home" class="text-black hover:text-gray-600 transition relative" data-translate="nav.home">НАЧАЛО</a>
+                    <a href="services.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.services">УСЛУГИ</a>
+                    <a href="gallery.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.gallery">ГАЛЕРИЯ</a>
+                    <a href="tips.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.tips">СЪВЕТИ</a>
+                    <a href="products.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.products">ПРОДУКТИ</a>
+                    <a href="about.html" class="text-black hover:text-gray-600 transition relative" data-translate="nav.about">ЗА НАС</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-300 text-center">
+                <p class="mb-2"><a href="https://www.behance.net/uxuimate" target="_blank" class="text-purple-600 hover:text-purple-700 transition">Designed by UX UI MATE</a></p>
+                <p class="text-gray-500">Copyrighted © 2025 Soft Play Solutions</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "Project Gallery - Soft Play Solutions",
+        "description": "Gallery of completed children's playground projects in over 21 countries",
+        "url": "https://www.softplaysolutions.com/gallery.html"
+    }
+    </script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        // Gallery Modal Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const modal = document.getElementById('image-modal');
+            const modalImage = document.getElementById('modal-image');
+            const modalCaption = document.getElementById('modal-caption');
+            const closeModal = document.getElementById('close-modal');
+            const prevBtn = document.getElementById('prev-image');
+            const nextBtn = document.getElementById('next-image');
+            
+            // Gallery data
+            const galleryData = [
+                { src: 'pictures/image-(moderen-apartament-sofiya)-1.png', caption: 'Doha, Qatar' },
+                { src: 'pictures/image-(moderen-apartament-sofiya)-2.png', caption: 'Doha, Qatar' },
+                { src: 'pictures/image-(moderen-apartament-sofiya)-3.png', caption: 'Essen, Netherlands' },
+                { src: 'pictures/image-(moderen-apartament-sofiya)-4.png', caption: 'Essen, Netherlands' },
+                { src: 'pictures/image-(moderen-apartament-sofiya)-5.png', caption: 'Hasselt, Belgium' },
+                { src: 'pictures/image-(moderen-apartament-sofiya)-6.png', caption: 'Kiev, Ukraine' },
+                { src: 'pictures/image-(moderen-apartament-sofiya)-7.png', caption: 'Kiev, Ukraine' },
+                { src: 'pictures/image-(moderen-apartament-sofiya)-8.png', caption: 'Rhodes, Greece' },
+                { src: 'pictures/image-(moderen-apartament-sofiya).png', caption: 'Anje, France' }
+            ];
+            
+            let currentIndex = 0;
+            
+            // Open modal
+            function openModal(index) {
+                currentIndex = index;
+                updateModalImage();
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+            
+            // Close modal
+            function closeModalFunc() {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+            
+            // Update modal image
+            function updateModalImage() {
+                modalImage.src = galleryData[currentIndex].src;
+                modalImage.alt = galleryData[currentIndex].caption;
+                modalCaption.textContent = galleryData[currentIndex].caption;
+            }
+            
+            // Navigate to previous image
+            function prevImage() {
+                currentIndex = (currentIndex - 1 + galleryData.length) % galleryData.length;
+                updateModalImage();
+            }
+            
+            // Navigate to next image
+            function nextImage() {
+                currentIndex = (currentIndex + 1) % galleryData.length;
+                updateModalImage();
+            }
+            
+            // Event listeners
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', () => openModal(index));
+            });
+            
+            closeModal.addEventListener('click', closeModalFunc);
+            prevBtn.addEventListener('click', prevImage);
+            nextBtn.addEventListener('click', nextImage);
+            
+            // Close modal on background click
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModalFunc();
+                }
+            });
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', function(e) {
+                if (!modal.classList.contains('hidden')) {
+                    if (e.key === 'Escape') {
+                        closeModalFunc();
+                    } else if (e.key === 'ArrowLeft') {
+                        prevImage();
+                    } else if (e.key === 'ArrowRight') {
+                        nextImage();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
